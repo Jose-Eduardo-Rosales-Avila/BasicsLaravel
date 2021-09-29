@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="max-w-6xl mx-auto bg-indigo-500 p-2">
+    <div class="max-w-6xl mx-auto bg-indigo-500 p-3">
         <table>
             <thead>
             <tr>

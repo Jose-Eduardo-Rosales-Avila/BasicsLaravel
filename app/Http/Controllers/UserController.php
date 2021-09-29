@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use DB;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -14,7 +15,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        /*$users = User::all();*/
+        $users = DB::table('users')->simplePaginate(5);
         return view('user.index', compact('users'));
     }
 

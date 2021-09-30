@@ -27,16 +27,16 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($users as $user)
+            @foreach($products as $product)
                 <tr>
                     <td class="py-4 px-6 border-b border-grey-light">
-                        {{$user->name}}
+                        {{$product->name}}
                     </td>
                     <td class="py-4 px-6 border-b border-grey-light">
-                        {{$user->email}}
+                        {{$product->email}}
                     </td>
                     <td class="py-4 px-6 border-b border-grey-light">
-                        {{$user->email_verified_at}}
+                        {{$product->email_verified_at}}
                     </td>
 <!--                    <td>
                         <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
@@ -75,7 +75,7 @@
             </tbody>
         </table>
         </div>
-        {{ $users->links()}}
+        {{ $products->links()}}
     </div>
 </x-app-layout>
 

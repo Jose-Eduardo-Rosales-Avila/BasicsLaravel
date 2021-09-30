@@ -34,12 +34,12 @@
                         {{$user->email_verified_at}}
                     </td>
                     <td>
-                        <button class="bg-black-500 hover:bg-black-700 text-white font-bold py-2 px-4 rounded">
+                        <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
                             Ver
                         </button>
                     </td>
                     <td>
-                        <button class="bg-black-500 hover:bg-black-700 text-white font-bold py-2 px-4 rounded">
+                        <button class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
                             Editar
                         </button>
                     </td>

@@ -48,8 +48,9 @@
 <!--                        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                             Borrar
                         </button>-->
-                    <form action="" method="POST">
-
+                    <form action="{{ route('Product.delete', $product->id)}}" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <button type="button" title="edit" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
                                 <i class="fas fa-eye text-success  fa-lg"></i>
                         </button>
@@ -57,11 +58,11 @@
                         <button type="button" title="edit" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
                                 <i class="fas fa-edit  fa-lg"></i>
                         </button>
-
+                        
+                        @method('DELETE')
                         @csrf
-                        @method('delete')
 
-                        <button type="submit" title="delete" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                        <button type="submit" title="delete" value="delete" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                             <i class="fas fa-trash fa-lg text-danger"></i>
                         </button>
                     </form>

@@ -27,6 +27,9 @@ Route::resource('/product/', \App\Http\Controllers\ProductController::class)->mi
 Route::resource('/brand/', \App\Http\Controllers\BrandController::class)->middleware(['auth:sanctum', 'verified']);
 //Route::resource('/product/', ProductController::class);
 
+Route::post('/product/delete/{id}/', 'ProductController@destroy')->name('Product.delete');
+Route::delete('/product/delete/{id}/', 'ProductController@destroy')->name('Product.delete');
+
 
 
 

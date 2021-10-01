@@ -16,10 +16,12 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        /*DB::table('users')->insert([
-            'nombre' => ''
-        ]);*/
-        User::factory()->count(50)->create();
+        DB::table('users')->insert([
+            'name' => 'Admin',
+            'email' => 'des1@c9sd.com',
+            'password' => bcrypt('@password'),
+        ]);
+        User::factory()->count(10)->create();
 
     }
 }

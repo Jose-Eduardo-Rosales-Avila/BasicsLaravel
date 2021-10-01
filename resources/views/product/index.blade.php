@@ -1,13 +1,13 @@
 <x-app-layout>
-    <div class="max-w-6xl mx-auto bg-indigo-500 p-3">
+    <div class="max-w-6xl mx-auto bg-white-500 p-3">
 <!--            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
                 Nuevo
             </button>-->
-        
+
              <button type="button" title="Create a product" class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded">
                     <i class="fas fa-plus-circle"></i>
             </button>
-        
+
         <div class="bg-white shadow-md rounded my-6">
         <table class="text-left w-full border-collapse">
             <thead>
@@ -44,28 +44,14 @@
                     <td class="py-4 px-6 border-b border-grey-light">
                         {{$product->brand->name}}
                     </td>
+                    <td></td>
+                    <td></td>
                     <td>
-<!--                        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                            Borrar
-                        </button>-->
-                    <form action="{{ route('Product.delete', $product->id)}}" method="POST">
-                        <input type="hidden" name="_method" value="DELETE">
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <button type="button" title="edit" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                                <i class="fas fa-eye text-success  fa-lg"></i>
-                        </button>
-
-                        <button type="button" title="edit" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
-                                <i class="fas fa-edit  fa-lg"></i>
-                        </button>
-                        
-                        @method('DELETE')
-                        @csrf
-
-                        <button type="submit" title="delete" value="delete" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                            <i class="fas fa-trash fa-lg text-danger"></i>
-                        </button>
-                    </form>
+                        <form href="{{route('product.destroy',$product->id)}}">
+                            @csrf
+                            @method('delete')
+                            <button type="submit">Delete</button>
+                        </form>
                     </td>
                 </tr>
             @endforeach

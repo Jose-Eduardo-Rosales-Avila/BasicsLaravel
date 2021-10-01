@@ -21,8 +21,11 @@ class BrandFactory extends Factory
      */
     public function definition()
     {
+
         return [
-            //
+            'name' => $this->faker->word(),
+            'description' => $this->faker->country(),
         ];
+        
     }
 }

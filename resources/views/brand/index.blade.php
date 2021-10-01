@@ -4,7 +4,7 @@
                 Nuevo
             </button>-->
         
-             <button type="button" title="Create a product" class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded">
+             <button type="button" title="Create a brand" class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded">
                     <i class="fas fa-plus-circle"></i>
             </button>
         
@@ -18,31 +18,19 @@
                 <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">
                     {{__('Description')}}
                 </th>
-                <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">
-                    {{__('Price')}}
-                </th>
-                <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">
-                    {{__('Brand')}}
-                </th>
                 <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light" colspan="3">
                     {{__('Acciones')}}
                 </th>
             </tr>
             </thead>
             <tbody>
-            @foreach($products as $product)
+            @foreach($brands as $brand)
                 <tr>
                     <td class="py-4 px-6 border-b border-grey-light">
-                        {{$product->name}}
+                        {{$brand->name}}
                     </td>
                     <td class="py-4 px-6 border-b border-grey-light">
-                        {{$product->description}}
-                    </td>
-                    <td class="py-4 px-6 border-b border-grey-light">
-                        {{'$' . $product->price}}
-                    </td>
-                    <td class="py-4 px-6 border-b border-grey-light">
-                        {{$product->brand->name}}
+                        {{$brand->description}}
                     </td>
                     <td>
 <!--                        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
@@ -71,7 +59,7 @@
             </tbody>
         </table>
         </div>
-        {{ $products->links()}}
+        {{ $brands->links()}}
     </div>
 </x-app-layout>
 

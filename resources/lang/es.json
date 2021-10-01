@@ -1,5 +1,8 @@
 {
     "Name": "Nombre",
     "Email": "Correo Electronico",
-    "EmailVerifiedAt": "Fecha Verificacion de Correo"
+    "EmailVerifiedAt": "Fecha Verificacion de Correo",
+    "Description": "Descripcion",
+    "Price": "Precio",
+    "Brand": "Marca"
 }
